@@ -1,5 +1,10 @@
 #include <iostream>
 
-int main() {
-  std::cout << "Hello World!\n";
+#include "FileHandling.h"
+
+int main(int argc, char *argv[]) {
+  FileHandling fileHandling(argc, argv);
+
+
+  return 0;
 }
