@@ -2,19 +2,21 @@
 
 void FileIO::printImage() {
   std::cout << name << std::endl;
-  for (int i = 0; i < image.height; i++) {
-    for (int j = 0; j < image.width; j++) {
+  for (int i = 1; i < image.height; i++) {
+    for (int j = 1; j < image.width; j++) {
       std::cout << image.bitmap[i][j];
     }
     std::cout << std::endl;
   }
 }
-void FileIO::processLine() {
+void FileIO::lineInput() {
   fileIn >> command; 
 
   switch (command) {
     case 'I':
       fileIn >> M >> N;
+      M++;
+      N++;
       break;
     case 'C':
       break;

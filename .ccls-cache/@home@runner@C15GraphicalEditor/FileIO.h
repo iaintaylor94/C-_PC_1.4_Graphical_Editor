@@ -3,12 +3,13 @@
 
 #include <iostream>
 #include <fstream>
+#include <stdbool.h>
 
 #include "FileHandling.h"
 
 class FileIO : public FileHandling {
 
-const static int MAX_WIDTH = 250, MAX_HEIGHT = 250;
+const static int MAX_WIDTH = 251, MAX_HEIGHT = 251;
 struct Image {
   char bitmap[MAX_HEIGHT][MAX_WIDTH];
   int height, width;
@@ -26,11 +27,12 @@ protected:
   std::string name;
 
   void printImage();
-  void processLine();
 
 public:
   FileIO (int argc, char** argv) : FileHandling(argc, argv) {};
   ~FileIO (void) {};
+
+  void lineInput();
 
 };
 #endif

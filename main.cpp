@@ -1,10 +1,13 @@
 #include <iostream>
 
-#include "FileHandling.h"
+#include "ImageProcessing.h"
 
 int main(int argc, char *argv[]) {
-  FileHandling fileHandling(argc, argv);
-
+  ImageProcessing imageProcessing(argc, argv);
+  
+  do {
+    imageProcessing.lineInput();
+  } while (imageProcessing.processLine());
 
   return 0;
 }

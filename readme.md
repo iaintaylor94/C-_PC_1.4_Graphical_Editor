@@ -53,5 +53,6 @@ The commands are of the form:
 ### Bug Checklist
 - [1] Fill border orthogonal/vertical
 - [2] Fill (C) must not be the previous colour of the pixel
+- [3] Array offset by 1
 
 [^1]: Programming Challenges By S.Skienna and M.Revilla, page 19
